@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "refers",
+  "info": {
+    "name": "refer",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "by": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "refered"
+    },
+    "to": {
+      "plugin": "users-permissions",
+      "collection": "user",
+      "via": "referd_by"
+    }
+  }
+}

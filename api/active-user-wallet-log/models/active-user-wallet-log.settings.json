@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "active_user_wallet_logs",
+  "info": {
+    "name": "Active User Wallet Log",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "referal_earn": {
+      "type": "float"
+    },
+    "tires_earn": {
+      "type": "float"
+    },
+    "withdrawal": {
+      "type": "float"
+    },
+    "users_permissions_user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "active_user_wallet_logs"
+    },
+    "approve": {
+      "type": "boolean",
+      "default": false
+    },
+    "active_user_tiers_log": {
+      "via": "active_user_wallet_log",
+      "model": "active-user-tiers-log"
+    }
+  }
+}

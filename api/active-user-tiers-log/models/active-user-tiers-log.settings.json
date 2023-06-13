@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "active_user_tiers_logs",
+  "info": {
+    "name": "Active User Tiers Log",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "expire_time": {
+      "type": "datetime"
+    },
+    "tier": {
+      "model": "tier",
+      "via": "active_user_tiers_logs",
+      "collection": "tier",
+      "dominant": true
+    },
+    "completed": {
+      "type": "boolean",
+      "default": false
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "collection": "user",
+      "via": "active_user_tiers_logs",
+      "model": "user"
+    },
+    "txid": {
+      "type": "string"
+    },
+    "active_user_wallet_log": {
+      "via": "active_user_tiers_log",
+      "model": "active-user-wallet-log"
+    }
+  }
+}

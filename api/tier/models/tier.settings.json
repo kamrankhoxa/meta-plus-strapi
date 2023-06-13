@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tiers",
+  "info": {
+    "name": "Tier",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "number": {
+      "type": "integer"
+    },
+    "subscription": {
+      "type": "string"
+    },
+    "earn": {
+      "type": "float"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "active_user_tiers_logs": {
+      "via": "tier",
+      "collection": "active-user-tiers-log"
+    }
+  }
+}

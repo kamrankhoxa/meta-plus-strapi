@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/active-user-tiers-logs",
+      "handler": "active-user-tiers-log.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/active-user-tiers-logs/count",
+      "handler": "active-user-tiers-log.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/active-user-tiers-logs/:id",
+      "handler": "active-user-tiers-log.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/active-user-tiers-logs",
+      "handler": "active-user-tiers-log.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/active-user-tiers-logs/:id",
+      "handler": "active-user-tiers-log.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/active-user-tiers-logs/:id",
+      "handler": "active-user-tiers-log.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
